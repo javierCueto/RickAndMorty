@@ -16,6 +16,8 @@
 		3B7C2EAA291DEF8A005B3D42 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EA9291DEF8A005B3D42 /* Coordinator.swift */; };
 		3B7C2EAD291DEFDE005B3D42 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EAC291DEFDE005B3D42 /* AppCoordinator.swift */; };
 		3B7C2EAF291DF03A005B3D42 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */; };
+		3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */; };
+		3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3B7C2EA9291DEF8A005B3D42 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3B7C2EAC291DEFDE005B3D42 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +334,7 @@
 		3B7C2EA3291DED95005B3D42 /* CoordinatorScreens */ = {
 			isa = PBXGroup;
 			children = (
+				3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */,
+				3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -510,6 +516,8 @@
 				3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */,
 				3B7C2EAD291DEFDE005B3D42 /* AppCoordinator.swift in Sources */,
 				3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */,
+				3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */,
+				3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */,
 				3B7C2E5C291DE7A4005B3D42 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,6 @@ final class AppCoordinator: Coordinator {
         self.navigation = navigation
         self.appFactory = appFactory
         configWindow(window: window)
-        
     }
     
     

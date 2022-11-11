@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appFactory = AppFactoryImp()
         window = UIWindow(windowScene: scene)
         appCoordinator = AppCoordinator(navigation: navigation, appFactory: appFactory, window: window)
+        appCoordinator.start()
         
     }
 
