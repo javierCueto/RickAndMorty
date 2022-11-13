@@ -20,8 +20,5 @@ struct LoadMenuUseCaseImp: LoadMenuUseCase {
         } catch {
             return .failure(error)
         }
-      
     }
-    
-    
 }
