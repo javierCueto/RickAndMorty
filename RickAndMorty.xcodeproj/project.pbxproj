@@ -18,6 +18,9 @@
 		3B7C2EAF291DF03A005B3D42 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */; };
 		3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */; };
 		3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */; };
+		3BCC301C292077EB00F63A96 /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */; };
+		3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */; };
+		3BCC302029207A8100F63A96 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301F29207A8100F63A96 /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
+		3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Contraints.swift"; sourceTree = "<group>"; };
+		3BCC301F29207A8100F63A96 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				3B7C2E5D291DE7A4005B3D42 /* HomeMenuController.swift */,
+				3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */,
 			);
 			path = HomeMenu;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 		3B7C2E97291DECE8005B3D42 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 		3B7C2E9E291DED2A005B3D42 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3BCC301F29207A8100F63A96 /* Reusable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -512,12 +521,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B7C2EAF291DF03A005B3D42 /* AppFactory.swift in Sources */,
+				3BCC302029207A8100F63A96 /* Reusable.swift in Sources */,
 				3B7C2EAA291DEF8A005B3D42 /* Coordinator.swift in Sources */,
 				3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */,
+				3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */,
 				3B7C2EAD291DEFDE005B3D42 /* AppCoordinator.swift in Sources */,
 				3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */,
 				3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */,
 				3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */,
+				3BCC301C292077EB00F63A96 /* ItemHomeMenuCell.swift in Sources */,
 				3B7C2E5C291DE7A4005B3D42 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
