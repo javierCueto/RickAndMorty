@@ -1,0 +1,82 @@
+//
+//  HomeMenuController.swift
+//  RickAndMorty
+//
+//  Created by Javier Cueto on 10/11/22.
+//
+
+import UIKit
+import Combine
+
+final class HomeMenuController: UICollectionViewController {
+    
+    private let viewModel: HomeMenuViewModel
+    private var cancellable = Set<AnyCancellable>()
+    
+    init(viewModel: HomeMenuViewModel, layout: UICollectionViewFlowLayout) {
+        self.viewModel = viewModel
+        super.init(collectionViewLayout: layout)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configUI()
+        configCollectionView()
+        stateController()
+        viewModel.viewDidLoad()
+    }
+    
+    private func stateController() {
+        viewModel
+            .state
+            .receive(on: RunLoop.main)
+            .sink { state in
+            switch state {
+            case .success:
+                self.collectionView.reloadData()
+            case .loading:
+                print("loading")
+            case .fail(error: let error):
+                print("error",error)
+            }
+        }.store(in: &cancellable)
+    }
+    
+    private func configUI() {
+        view.backgroundColor = .systemBackground
+    }
+
+    private func configCollectionView() {
+        collectionView.register(ItemHomeMenuCell.self, forCellWithReuseIdentifier: ItemHomeMenuCell.reuseIdentifier)
+    }
+
+}
+
+
+extension HomeMenuController {
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: ItemHomeMenuCell.reuseIdentifier,
+                for: indexPath
+            ) as? ItemHomeMenuCell
+        else { return UICollectionViewCell() }
+        
+        let viewModelCell = viewModel.getItemMenuViewMode(indexPath: indexPath)
+        cell.configData(viewModel: viewModelCell)
+        
+        return cell
+    }
+    
+    override func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        viewModel.menuItemsCount
+    }
+}
