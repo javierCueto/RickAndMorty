@@ -8,4 +8,5 @@
 struct AppLocalized {
     static let error = "Error"
     static let appName = "Rick And Morty"
+    static let okButton = "Ok"
 }

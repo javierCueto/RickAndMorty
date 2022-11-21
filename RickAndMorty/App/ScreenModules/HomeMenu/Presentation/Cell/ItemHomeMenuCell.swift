@@ -14,14 +14,14 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGroupedBackground
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = ViewValues.defaultCornerRadius
         view.layer.masksToBounds = true
         return view
     }()
     
     private let categoryMenuImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "default")
+        imageView.image = UIImage(named: Images.defaultImage)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -29,7 +29,6 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     private let titleCategoryLabel: UILabel = {
        let label = UILabel()
         label.textColor = .white
-        label.text = "Category"
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()
@@ -47,7 +46,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     // MARK: - Helpers
     private func configUI() {
         addSubview(mainContainer)
-        mainContainer.fillSuperView(widthPadding: 10)
+        mainContainer.fillSuperView(widthPadding: ViewValues.normalPadding)
         
         mainContainer.addSubview(categoryMenuImageView)
         categoryMenuImageView.fillSuperView()
@@ -59,9 +58,9 @@ final class ItemHomeMenuCell: UICollectionViewCell {
             right: mainContainer.rightAnchor,
             bottom: mainContainer.bottomAnchor,
             left: mainContainer.leftAnchor,
-            pRight: 10,
-            pBottom: 10,
-            pLeft: 10)
+            pRight: ViewValues.normalPadding,
+            pBottom: ViewValues.normalPadding,
+            pLeft: ViewValues.normalPadding)
         
     }
     
@@ -69,7 +68,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         let gradientMaskLayer = CAGradientLayer()
         gradientMaskLayer.frame = self.bounds
         gradientMaskLayer.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor]
-        gradientMaskLayer.locations = [0.6, 0.9]
+        gradientMaskLayer.locations = [ViewValues.gradientTitleInit, ViewValues.gradientTitleEnd]
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
     

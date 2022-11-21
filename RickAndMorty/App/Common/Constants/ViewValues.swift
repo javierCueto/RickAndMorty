@@ -14,4 +14,7 @@ struct ViewValues {
     static let multiplierTwo: CGFloat = 2
     static let tagIdentifierSpinner = 123
     static let opacityContainerSpinner = 0.3
+    static let defaultCornerRadius: CGFloat = 10
+    static let gradientTitleInit: NSNumber = 0.6
+    static let gradientTitleEnd: NSNumber = 0.9
 }
