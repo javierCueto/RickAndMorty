@@ -18,6 +18,9 @@
 		3B7C2EAF291DF03A005B3D42 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */; };
 		3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */; };
 		3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */; };
+		3BC393DD292BF54200DE6BF5 /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393DC292BF54200DE6BF5 /* SpinnerDisplayable.swift */; };
+		3BC393DF292BF57400DE6BF5 /* ViewValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393DE292BF57400DE6BF5 /* ViewValues.swift */; };
+		3BC393E1292BF7C800DE6BF5 /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393E0292BF7C800DE6BF5 /* MessageDisplayable.swift */; };
 		3BCC301C292077EB00F63A96 /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */; };
 		3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */; };
 		3BCC302029207A8100F63A96 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301F29207A8100F63A96 /* Reusable.swift */; };
@@ -71,6 +74,9 @@
 		3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		3BC393DC292BF54200DE6BF5 /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
+		3BC393DE292BF57400DE6BF5 /* ViewValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewValues.swift; sourceTree = "<group>"; };
+		3BC393E0292BF7C800DE6BF5 /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
 		3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
 		3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Contraints.swift"; sourceTree = "<group>"; };
 		3BCC301F29207A8100F63A96 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 		3B7C2E8C291DEC4C005B3D42 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3BC393DB292BF52100DE6BF5 /* Components */,
 				3B7C2EA0291DED43005B3D42 /* Localize */,
 				3B7C2E9F291DED34005B3D42 /* StateController */,
 				3B7C2E9E291DED2A005B3D42 /* Utils */,
@@ -294,6 +301,7 @@
 		3B7C2E98291DECF1005B3D42 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				3BC393DE292BF57400DE6BF5 /* ViewValues.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -426,6 +434,15 @@
 				3B7C2EAC291DEFDE005B3D42 /* AppCoordinator.swift */,
 			);
 			path = AppCordinator;
+			sourceTree = "<group>";
+		};
+		3BC393DB292BF52100DE6BF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3BC393DC292BF54200DE6BF5 /* SpinnerDisplayable.swift */,
+				3BC393E0292BF7C800DE6BF5 /* MessageDisplayable.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		3BCC30212920872A00F63A96 /* Presentation */ = {
@@ -686,10 +703,12 @@
 				3BCC30262920877100F63A96 /* MenuRepository.swift in Sources */,
 				3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */,
 				3BCC3035292089F100F63A96 /* StateController.swift in Sources */,
+				3BC393DD292BF54200DE6BF5 /* SpinnerDisplayable.swift in Sources */,
 				3BCC3029292087DA00F63A96 /* MenuItem.swift in Sources */,
 				3B7C2EAD291DEFDE005B3D42 /* AppCoordinator.swift in Sources */,
 				3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */,
 				3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */,
+				3BC393DF292BF57400DE6BF5 /* ViewValues.swift in Sources */,
 				3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */,
 				3BCC3040292099C000F63A96 /* ApiError.swift in Sources */,
 				3BCC303729208AA000F63A96 /* ItemHomeMenuViewModel.swift in Sources */,
@@ -703,6 +722,7 @@
 				3B7C2E5C291DE7A4005B3D42 /* SceneDelegate.swift in Sources */,
 				3BCC303A292098BC00F63A96 /* ApiClientService.swift in Sources */,
 				3BCC304629209EE100F63A96 /* MenuDTO.swift in Sources */,
+				3BC393E1292BF7C800DE6BF5 /* MessageDisplayable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
