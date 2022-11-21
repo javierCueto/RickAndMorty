@@ -21,6 +21,7 @@
 		3BC393DD292BF54200DE6BF5 /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393DC292BF54200DE6BF5 /* SpinnerDisplayable.swift */; };
 		3BC393DF292BF57400DE6BF5 /* ViewValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393DE292BF57400DE6BF5 /* ViewValues.swift */; };
 		3BC393E1292BF7C800DE6BF5 /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393E0292BF7C800DE6BF5 /* MessageDisplayable.swift */; };
+		3BC393E3292C025B00DE6BF5 /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC393E2292C025B00DE6BF5 /* AppLocalized.swift */; };
 		3BCC301C292077EB00F63A96 /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */; };
 		3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */; };
 		3BCC302029207A8100F63A96 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC301F29207A8100F63A96 /* Reusable.swift */; };
@@ -77,6 +78,7 @@
 		3BC393DC292BF54200DE6BF5 /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 		3BC393DE292BF57400DE6BF5 /* ViewValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewValues.swift; sourceTree = "<group>"; };
 		3BC393E0292BF7C800DE6BF5 /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
+		3BC393E2292C025B00DE6BF5 /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
 		3BCC301B292077EB00F63A96 /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
 		3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Contraints.swift"; sourceTree = "<group>"; };
 		3BCC301F29207A8100F63A96 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		3B7C2EA0291DED43005B3D42 /* Localize */ = {
 			isa = PBXGroup;
 			children = (
+				3BC393E2292C025B00DE6BF5 /* AppLocalized.swift */,
 			);
 			path = Localize;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				3BCC304C2920A13700F63A96 /* Endpoint.swift in Sources */,
 				3BCC304329209C9A00F63A96 /* HttpResponseStatus.swift in Sources */,
 				3BCC304A29209FE500F63A96 /* PropertyIterator.swift in Sources */,
+				3BC393E3292C025B00DE6BF5 /* AppLocalized.swift in Sources */,
 				3BCC30332920898100F63A96 /* HomeMenuViewModel.swift in Sources */,
 				3BCC302C2920882B00F63A96 /* MenuRepositoryImp.swift in Sources */,
 				3BCC304829209F6400F63A96 /* MenuDTO+Mapper.swift in Sources */,

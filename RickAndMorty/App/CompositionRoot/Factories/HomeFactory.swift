@@ -9,12 +9,12 @@ import Combine
 import UIKit
 
 protocol HomeFactory {
-    func makeModule() -> UIViewController
+    func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController
 }
 
 struct HomeFactoryImp: HomeFactory {
     
-    func makeModule() -> UIViewController {
+    func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImp()
         let menuRepository = MenuRepositoryImp(apiClientService: apiClientService, urlList: Endpoint.baseUrl)
         let loadMenuUseCase = LoadMenuUseCaseImp(menuRepository: menuRepository)
@@ -22,10 +22,9 @@ struct HomeFactoryImp: HomeFactory {
         let homeMenuViewModel = HomeMenuViewModelImp(state: state, loadMenuUseCase: loadMenuUseCase)
         let homeMenuController = HomeMenuController(
             viewModel: homeMenuViewModel,
-            layout: makeLayout())
+            layout: makeLayout(), coordinator: coordinator)
         homeMenuController.title = "Rick And Morty"
         return homeMenuController
-        
     }
     
     private func makeLayout() -> UICollectionViewFlowLayout {

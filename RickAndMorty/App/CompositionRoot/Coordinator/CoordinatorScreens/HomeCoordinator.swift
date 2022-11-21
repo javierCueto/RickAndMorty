@@ -17,9 +17,35 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = homeFactory.makeModule()
+        let controller = homeFactory.makeModule(coordinator: self)
         navigation.pushViewController(controller, animated: true)
     }
+}
+
+extension HomeCoordinator: HomeMenuViewControllerCoordinator {
+    func didSelectMenuCell(model: MenuItem) {
+        //TODO: Use a enum or a struct to avoid string directly
+        switch model.title {
+        case "characters":
+            goToCharacters()
+        case "episodes":
+            goToEpisodes()
+        case "locations":
+            goToLocations()
+        default:
+            break
+        }
+    }
     
+    private func goToCharacters() {
+        print("screen characters")
+    }
     
+    private func goToLocations() {
+        print("screen locations")
+    }
+    
+    private func goToEpisodes() {
+        print("screen episodes")
+    }
 }
