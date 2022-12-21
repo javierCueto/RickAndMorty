@@ -10,6 +10,10 @@ import UIKit
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController
+    func makeCoordinatorCharacters(
+        navigation: UINavigationController,
+        urlList: String
+    ) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
@@ -42,4 +46,14 @@ struct HomeFactoryImp: HomeFactory {
             right: ViewValues.normalPadding)
         return layout
     }
+    
+    func makeCoordinatorCharacters(
+        navigation: UINavigationController,
+        urlList: String
+    ) -> Coordinator {
+        let charactersFactory = CharactersFactoryImp()
+        let characterCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: charactersFactory)
+        return characterCoordinator
+    }
+    
 }

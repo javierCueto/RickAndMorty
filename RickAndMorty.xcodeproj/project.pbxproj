@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B07D8F12952B8660067C293 /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07D8F02952B8660067C293 /* CharactersFactory.swift */; };
+		3B07D8F42952B8D40067C293 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07D8F32952B8D40067C293 /* CharactersViewController.swift */; };
+		3B07D8F62952B9A20067C293 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07D8F52952B9A20067C293 /* CharactersCoordinator.swift */; };
 		3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2E59291DE7A4005B3D42 /* AppDelegate.swift */; };
 		3B7C2E5C291DE7A4005B3D42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2E5B291DE7A4005B3D42 /* SceneDelegate.swift */; };
 		3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2E5D291DE7A4005B3D42 /* HomeMenuController.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B07D8F02952B8660067C293 /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
+		3B07D8F32952B8D40067C293 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		3B07D8F52952B9A20067C293 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		3B7C2E56291DE7A4005B3D42 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7C2E59291DE7A4005B3D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7C2E5B291DE7A4005B3D42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B07D8F22952B8C30067C293 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B07D8F32952B8D40067C293 /* CharactersViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		3B7C2E4D291DE7A4005B3D42 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +269,7 @@
 		3B7C2E91291DECB5005B3D42 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				3B07D8F22952B8C30067C293 /* Presentation */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -396,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */,
+				3B07D8F52952B9A20067C293 /* CharactersCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -405,6 +421,7 @@
 			children = (
 				3B7C2EAE291DF03A005B3D42 /* AppFactory.swift */,
 				3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */,
+				3B07D8F02952B8660067C293 /* CharactersFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -706,10 +723,12 @@
 				3B7C2EAA291DEF8A005B3D42 /* Coordinator.swift in Sources */,
 				3BCC303D2920992300F63A96 /* ApiClientServiceImp.swift in Sources */,
 				3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */,
+				3B07D8F62952B9A20067C293 /* CharactersCoordinator.swift in Sources */,
 				3BCC30262920877100F63A96 /* MenuRepository.swift in Sources */,
 				3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */,
 				3BCC3035292089F100F63A96 /* StateController.swift in Sources */,
 				3BC393DD292BF54200DE6BF5 /* SpinnerDisplayable.swift in Sources */,
+				3B07D8F12952B8660067C293 /* CharactersFactory.swift in Sources */,
 				3BCC3029292087DA00F63A96 /* MenuItem.swift in Sources */,
 				3B7C2EAD291DEFDE005B3D42 /* AppCoordinator.swift in Sources */,
 				3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */,
@@ -731,6 +750,7 @@
 				3BCC303A292098BC00F63A96 /* ApiClientService.swift in Sources */,
 				3BCC304629209EE100F63A96 /* MenuDTO.swift in Sources */,
 				3BC393E1292BF7C800DE6BF5 /* MessageDisplayable.swift in Sources */,
+				3B07D8F42952B8D40067C293 /* CharactersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

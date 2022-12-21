@@ -27,7 +27,7 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
         //TODO: Use a enum or a struct to avoid string directly
         switch model.title {
         case "characters":
-            goToCharacters()
+            goToCharacters(urlList: model.url)
         case "episodes":
             goToEpisodes()
         case "locations":
@@ -37,8 +37,11 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
         }
     }
     
-    private func goToCharacters() {
-        print("screen characters")
+    private func goToCharacters(urlList: String) {
+        let characterCoordinator =  homeFactory.makeCoordinatorCharacters(
+            navigation: navigation,
+            urlList: urlList)
+        characterCoordinator.start()
     }
     
     private func goToLocations() {
