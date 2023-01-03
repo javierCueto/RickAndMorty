@@ -26,6 +26,11 @@
 		3B2A4ECB2963CE3C005E8ED6 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4ECA2963CE3C005E8ED6 /* Info.swift */; };
 		3B2A4ECE2963CE92005E8ED6 /* CharacterRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4ECD2963CE92005E8ED6 /* CharacterRepositoryImp.swift */; };
 		3B2A4ED02963CF20005E8ED6 /* ResultsCharactersDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4ECF2963CF20005E8ED6 /* ResultsCharactersDTO+Mapping.swift */; };
+		3B2A4ED32963D36F005E8ED6 /* LoadCharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4ED22963D36F005E8ED6 /* LoadCharactersUseCase.swift */; };
+		3B2A4ED72963D551005E8ED6 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4ED62963D551005E8ED6 /* CharactersViewModel.swift */; };
+		3B2A4ED92963D5CA005E8ED6 /* ItemCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4ED82963D5CA005E8ED6 /* ItemCharacterViewModel.swift */; };
+		3B2A4EDC2963D6A3005E8ED6 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EDB2963D6A3005E8ED6 /* BaseViewModel.swift */; };
+		3B2A4EDE2963DE5E005E8ED6 /* UITableViewController+SpinnerLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EDD2963DE5E005E8ED6 /* UITableViewController+SpinnerLast.swift */; };
 		3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2E59291DE7A4005B3D42 /* AppDelegate.swift */; };
 		3B7C2E5C291DE7A4005B3D42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2E5B291DE7A4005B3D42 /* SceneDelegate.swift */; };
 		3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C2E5D291DE7A4005B3D42 /* HomeMenuController.swift */; };
@@ -99,6 +104,11 @@
 		3B2A4ECA2963CE3C005E8ED6 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		3B2A4ECD2963CE92005E8ED6 /* CharacterRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryImp.swift; sourceTree = "<group>"; };
 		3B2A4ECF2963CF20005E8ED6 /* ResultsCharactersDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultsCharactersDTO+Mapping.swift"; sourceTree = "<group>"; };
+		3B2A4ED22963D36F005E8ED6 /* LoadCharactersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCharactersUseCase.swift; sourceTree = "<group>"; };
+		3B2A4ED62963D551005E8ED6 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		3B2A4ED82963D5CA005E8ED6 /* ItemCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCharacterViewModel.swift; sourceTree = "<group>"; };
+		3B2A4EDB2963D6A3005E8ED6 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		3B2A4EDD2963DE5E005E8ED6 /* UITableViewController+SpinnerLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+SpinnerLast.swift"; sourceTree = "<group>"; };
 		3B7C2E56291DE7A4005B3D42 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7C2E59291DE7A4005B3D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7C2E5B291DE7A4005B3D42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,8 +177,8 @@
 		3B07D8F22952B8C30067C293 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				3B07D8F72952BDA60067C293 /* Cell */,
-				3B07D8F32952B8D40067C293 /* CharactersViewController.swift */,
+				3B2A4ED52963D526005E8ED6 /* ViewModel */,
+				3B2A4ED42963D51D005E8ED6 /* View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -226,6 +236,7 @@
 		3B2A4EC62963CD85005E8ED6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3B2A4ED12963D342005E8ED6 /* UseCases */,
 				3B2A4EC72963CD95005E8ED6 /* RepositoriesInterfaces */,
 			);
 			path = Domain;
@@ -245,6 +256,40 @@
 				3B2A4ECD2963CE92005E8ED6 /* CharacterRepositoryImp.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3B2A4ED12963D342005E8ED6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A4ED22963D36F005E8ED6 /* LoadCharactersUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3B2A4ED42963D51D005E8ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B07D8F32952B8D40067C293 /* CharactersViewController.swift */,
+				3B07D8F72952BDA60067C293 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B2A4ED52963D526005E8ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A4ED62963D551005E8ED6 /* CharactersViewModel.swift */,
+				3B2A4ED82963D5CA005E8ED6 /* ItemCharacterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3B2A4EDA2963D687005E8ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B2A4EDB2963D6A3005E8ED6 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3B7C2E4D291DE7A4005B3D42 = {
@@ -423,6 +468,7 @@
 			children = (
 				3BCC301D292078DE00F63A96 /* UIView+Contraints.swift */,
 				3B2A4EB02963C7EE005E8ED6 /* String+empty.swift */,
+				3B2A4EDD2963DE5E005E8ED6 /* UITableViewController+SpinnerLast.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -472,6 +518,7 @@
 		3B7C2E9D291DED16005B3D42 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3B2A4EDA2963D687005E8ED6 /* ViewModel */,
 				3B7C2E99291DECFA005B3D42 /* Components */,
 			);
 			path = Presentation;
@@ -834,6 +881,8 @@
 				3BCC302029207A8100F63A96 /* Reusable.swift in Sources */,
 				3BCC302F2920888000F63A96 /* LoadMenuUseCase.swift in Sources */,
 				3B7C2EAA291DEF8A005B3D42 /* Coordinator.swift in Sources */,
+				3B2A4EDC2963D6A3005E8ED6 /* BaseViewModel.swift in Sources */,
+				3B2A4ED92963D5CA005E8ED6 /* ItemCharacterViewModel.swift in Sources */,
 				3BCC303D2920992300F63A96 /* ApiClientServiceImp.swift in Sources */,
 				3B2A4EAF2963C740005E8ED6 /* StatusCharacter.swift in Sources */,
 				3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */,
@@ -851,6 +900,7 @@
 				3B7C2E5A291DE7A4005B3D42 /* AppDelegate.swift in Sources */,
 				3B7C2EB3291DF4E6005B3D42 /* HomeFactory.swift in Sources */,
 				3BC393DF292BF57400DE6BF5 /* ViewValues.swift in Sources */,
+				3B2A4EDE2963DE5E005E8ED6 /* UITableViewController+SpinnerLast.swift in Sources */,
 				3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */,
 				3B2A4EC92963CDB7005E8ED6 /* CharactersRepository.swift in Sources */,
 				3BCC3040292099C000F63A96 /* ApiError.swift in Sources */,
@@ -873,11 +923,13 @@
 				3B2A4ED02963CF20005E8ED6 /* ResultsCharactersDTO+Mapping.swift in Sources */,
 				3B7C2E5C291DE7A4005B3D42 /* SceneDelegate.swift in Sources */,
 				3B07D8F92952BDC50067C293 /* ItemCharacterTableViewCell.swift in Sources */,
+				3B2A4ED72963D551005E8ED6 /* CharactersViewModel.swift in Sources */,
 				3BCC303A292098BC00F63A96 /* ApiClientService.swift in Sources */,
 				3BCC304629209EE100F63A96 /* MenuDTO.swift in Sources */,
 				3B2A4EB72963CB73005E8ED6 /* Location.swift in Sources */,
 				3BC393E1292BF7C800DE6BF5 /* MessageDisplayable.swift in Sources */,
 				3B07D8F42952B8D40067C293 /* CharactersViewController.swift in Sources */,
+				3B2A4ED32963D36F005E8ED6 /* LoadCharactersUseCase.swift in Sources */,
 				3B2A4EB52963CB4B005E8ED6 /* Origin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -96,13 +96,19 @@ final class ItemCharacterTableViewCell: UITableViewCell {
             right: mainContainerView.rightAnchor,
             bottom: mainContainerView.bottomAnchor,
             left: characterImageView.rightAnchor,
-            pTop: ViewValues.doublePadding,
-            pBottom: ViewValues.doublePadding,
-            pLeft: ViewValues.doublePadding)
+            pTop: ViewValues.normalPadding,
+            pBottom: ViewValues.normalPadding,
+            pLeft: ViewValues.normalPadding)
         
         [nameLabel, specieLabel, statusLabel].forEach {
             labelContainerStackView.addArrangedSubview($0)
         }
+    }
+    
+    func configData(viewModel: ItemCharacterViewModel) {
+        nameLabel.text = viewModel.name
+        specieLabel.text = viewModel.specie
+        statusLabel.text = viewModel.status
     }
     
     // MARK: - Actions

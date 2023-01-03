@@ -28,7 +28,7 @@ extension Specie: CustomStringConvertible {
         case .alien:
             return AppLocalized.specieAlien
         case .human:
-            return AppLocalized.human
+            return AppLocalized.specieHuman
         case .other(let typeSpecie):
             return "\(AppLocalized.specie) \(String(describing: typeSpecie))"
         }

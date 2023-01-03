@@ -51,7 +51,7 @@ struct HomeFactoryImp: HomeFactory {
         navigation: UINavigationController,
         urlList: String
     ) -> Coordinator {
-        let charactersFactory = CharactersFactoryImp()
+        let charactersFactory = CharactersFactoryImp(urlList: urlList)
         let characterCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: charactersFactory)
         return characterCoordinator
     }
