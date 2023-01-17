@@ -13,8 +13,6 @@ protocol CharactersViewControllerCoordinator {
 }
 
 final class CharactersViewController: UITableViewController {
-    // MARK: - Public properties
-    
     // MARK: - Private properties
     private let viewModel: CharactersViewModel
     private var cancellable = Set<AnyCancellable>()
@@ -56,12 +54,10 @@ final class CharactersViewController: UITableViewController {
                 case .loading:
                     break
                 case .fail(error: let error):
-                    print("Error here", error)
+                    self?.presentAlert(message: error, title: AppLocalized.error)
                 }
             }.store(in: &cancellable)
     }
-    // MARK: - Actions
-    
 }
 
 // MARK: - TableViewDataSource
@@ -84,11 +80,7 @@ extension CharactersViewController {
         willDisplay cell: UITableViewCell,
         forRowAt indexPath: IndexPath
     ) {
-        if !viewModel.lastPage {
-            tableView.tableFooterView?.isHidden = false
-        }else {
-            tableView.tableFooterView?.isHidden = true
-        }
+        tableView.tableFooterView?.isHidden = viewModel.lastPage
     }
     
     override func tableView(
@@ -98,3 +90,5 @@ extension CharactersViewController {
         viewModel.itemCharactersCount
     }
 }
+
+extension CharactersViewController: MessageDisplayable { }

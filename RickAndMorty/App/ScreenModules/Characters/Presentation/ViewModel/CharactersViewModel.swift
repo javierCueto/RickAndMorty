@@ -17,7 +17,9 @@ protocol CharactersViewModel: BaseViewModel {
 final class CharactersViewModelImp: CharactersViewModel {
     var state: PassthroughSubject<StateController, Never>
     
-    var lastPage: Bool = false
+    var lastPage: Bool {
+        lastPageValidationUseCase.lastPage
+    }
     
     var itemCharactersCount: Int {
         characters.count
@@ -25,13 +27,16 @@ final class CharactersViewModelImp: CharactersViewModel {
     
     private var characters: [Character] = []
     private let loadCharactersUseCase: LoadCharactersUseCase
+    private var lastPageValidationUseCase: LastPageValidationUseCase
     
     init(
         loadCharactersUseCase: LoadCharactersUseCase,
-        state: PassthroughSubject<StateController, Never>
+        state: PassthroughSubject<StateController, Never>,
+        lastPageValidationUseCase: LastPageValidationUseCase
     ) {
         self.loadCharactersUseCase = loadCharactersUseCase
         self.state = state
+        self.lastPageValidationUseCase = lastPageValidationUseCase
     }
     
     func viewDidLoad() {
@@ -49,6 +54,7 @@ final class CharactersViewModelImp: CharactersViewModel {
     private func updateStateUI(resultUseCase: Result<[Character], Error>) {
         switch resultUseCase {
         case .success(let charactersArray):
+            lastPageValidationUseCase.updateLastPage(itemsCount: charactersArray.count)
             characters.append(contentsOf: charactersArray)
             state.send(.success)
         case .failure(let error):
@@ -57,15 +63,24 @@ final class CharactersViewModelImp: CharactersViewModel {
     }
     
     func getItemMenuViewModel(row: Int) -> ItemCharacterViewModel {
+        checkAndLoadMoreCharacters(row: row)
+        return makeItemCharacterViewModel(row: row)
+    }
+    
+    private func checkAndLoadMoreCharacters(row: Int) {
+        lastPageValidationUseCase.checkAndLoadMoreItems(
+            row: row,
+            actualItems: characters.count,
+            action: viewDidLoad)
+    }
+    
+    private func makeItemCharacterViewModel(row: Int) -> ItemCharacterViewModel {
         let character = characters[row]
-        let itemCharacterViewModel = ItemCharacterViewModel(character: character)
-        return itemCharacterViewModel
+        return ItemCharacterViewModel(character: character)
     }
     
     func getUrlList(row: Int) -> String {
         let character = characters[row]
         return character.urlCharacter
     }
-    
-    
 }
