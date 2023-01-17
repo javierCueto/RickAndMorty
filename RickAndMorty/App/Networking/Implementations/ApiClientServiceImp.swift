@@ -9,7 +9,7 @@ import Foundation
 
 struct ApiClientServiceImp: ApiClientService {
     
-    private let session: URLSession
+    let session: URLSession
     
     init(session: URLSession = URLSession.shared) {
         self.session = session

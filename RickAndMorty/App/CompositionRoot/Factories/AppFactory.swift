@@ -13,8 +13,11 @@ protocol AppFactory {
 
 
 struct AppFactoryImp: AppFactory {
+    
+    let appContainer = AppContainerImp()
+    
     func makeHomeCoordinator(navigation: UINavigationController) -> Coordinator {
-        let homeFactory = HomeFactoryImp()
+        let homeFactory = HomeFactoryImp(appContainer: appContainer)
         let homeCoordinator = HomeCoordinator(navigation: navigation, homeFactory: homeFactory)
         return homeCoordinator
     }
