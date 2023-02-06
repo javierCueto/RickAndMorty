@@ -9,5 +9,5 @@ import Foundation
 
 protocol ImageDataRepository {
     func fetchData(url: URL?) async -> Data?
-    func getFromCache(url: URL?) -> Data?
+    func getFromCache(url: String?) -> Data?
 }
