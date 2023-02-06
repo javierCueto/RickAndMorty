@@ -25,6 +25,14 @@
 		3B1F244A2991915600D7079D /* LocationDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24492991915600D7079D /* LocationDetailCoordinator.swift */; };
 		3B1F244D2991924200D7079D /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F244C2991924200D7079D /* LocationDetailViewController.swift */; };
 		3B1F24512991932900D7079D /* OriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24502991932900D7079D /* OriginViewController.swift */; };
+		3B1F24532991B37000D7079D /* LocationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24522991B37000D7079D /* LocationsFactory.swift */; };
+		3B1F24552991B3D800D7079D /* LocationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24542991B3D800D7079D /* LocationsCoordinator.swift */; };
+		3B1F24592991B67500D7079D /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24582991B67500D7079D /* LocationsViewController.swift */; };
+		3B1F245D2991B74500D7079D /* LocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F245C2991B74500D7079D /* LocationsRepository.swift */; };
+		3B1F24612991B7C200D7079D /* LocationsRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24602991B7C200D7079D /* LocationsRepositoryImp.swift */; };
+		3B1F24642991B85C00D7079D /* ResultLocationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24632991B85C00D7079D /* ResultLocationsDTO.swift */; };
+		3B1F24662991B8A800D7079D /* ResultLocationDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24652991B8A800D7079D /* ResultLocationDTO+Mapper.swift */; };
+		3B1F24692991B98E00D7079D /* LoadLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24682991B98E00D7079D /* LoadLocationsUseCase.swift */; };
 		3B2A4EAD2963C6FF005E8ED6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EAC2963C6FF005E8ED6 /* Character.swift */; };
 		3B2A4EAF2963C740005E8ED6 /* StatusCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EAE2963C740005E8ED6 /* StatusCharacter.swift */; };
 		3B2A4EB12963C7EE005E8ED6 /* String+empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EB02963C7EE005E8ED6 /* String+empty.swift */; };
@@ -126,6 +134,14 @@
 		3B1F24492991915600D7079D /* LocationDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailCoordinator.swift; sourceTree = "<group>"; };
 		3B1F244C2991924200D7079D /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		3B1F24502991932900D7079D /* OriginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginViewController.swift; sourceTree = "<group>"; };
+		3B1F24522991B37000D7079D /* LocationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsFactory.swift; sourceTree = "<group>"; };
+		3B1F24542991B3D800D7079D /* LocationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCoordinator.swift; sourceTree = "<group>"; };
+		3B1F24582991B67500D7079D /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		3B1F245C2991B74500D7079D /* LocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepository.swift; sourceTree = "<group>"; };
+		3B1F24602991B7C200D7079D /* LocationsRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepositoryImp.swift; sourceTree = "<group>"; };
+		3B1F24632991B85C00D7079D /* ResultLocationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocationsDTO.swift; sourceTree = "<group>"; };
+		3B1F24652991B8A800D7079D /* ResultLocationDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultLocationDTO+Mapper.swift"; sourceTree = "<group>"; };
+		3B1F24682991B98E00D7079D /* LoadLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadLocationsUseCase.swift; sourceTree = "<group>"; };
 		3B2A4EAC2963C6FF005E8ED6 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3B2A4EAE2963C740005E8ED6 /* StatusCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCharacter.swift; sourceTree = "<group>"; };
 		3B2A4EB02963C7EE005E8ED6 /* String+empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+empty.swift"; sourceTree = "<group>"; };
@@ -326,6 +342,72 @@
 				3B1F24502991932900D7079D /* OriginViewController.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B1F24562991B65600D7079D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24572991B65C00D7079D /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B1F24572991B65C00D7079D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24582991B67500D7079D /* LocationsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B1F245A2991B72200D7079D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24672991B97600D7079D /* UseCases */,
+				3B1F245B2991B72600D7079D /* RepositoriesInterfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3B1F245B2991B72600D7079D /* RepositoriesInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F245C2991B74500D7079D /* LocationsRepository.swift */,
+			);
+			path = RepositoriesInterfaces;
+			sourceTree = "<group>";
+		};
+		3B1F245E2991B79A00D7079D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F245F2991B7A000D7079D /* RepositoriesImplementations */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3B1F245F2991B7A000D7079D /* RepositoriesImplementations */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24602991B7C200D7079D /* LocationsRepositoryImp.swift */,
+			);
+			path = RepositoriesImplementations;
+			sourceTree = "<group>";
+		};
+		3B1F24622991B84400D7079D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24632991B85C00D7079D /* ResultLocationsDTO.swift */,
+				3B1F24652991B8A800D7079D /* ResultLocationDTO+Mapper.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		3B1F24672991B97600D7079D /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24682991B98E00D7079D /* LoadLocationsUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		3B2A4EAB2963C6E0005E8ED6 /* Entities */ = {
@@ -604,6 +686,10 @@
 		3B7C2E93291DECC7005B3D42 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				3B1F24622991B84400D7079D /* DTO */,
+				3B1F245E2991B79A00D7079D /* Data */,
+				3B1F245A2991B72200D7079D /* Domain */,
+				3B1F24562991B65600D7079D /* Presentation */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -746,6 +832,7 @@
 				3B1F242D299159F100D7079D /* CharacterDetailCoordinator.swift */,
 				3B1F24432991901000D7079D /* OriginCoordinator.swift */,
 				3B1F24492991915600D7079D /* LocationDetailCoordinator.swift */,
+				3B1F24542991B3D800D7079D /* LocationsCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -759,6 +846,7 @@
 				3B1F242F29915A4A00D7079D /* CharacterDetailFactory.swift */,
 				3B1F24452991903800D7079D /* OriginFactory.swift */,
 				3B1F24472991911800D7079D /* LocationDetailFactory.swift */,
+				3B1F24522991B37000D7079D /* LocationsFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1077,6 +1165,7 @@
 				3BCC301E292078DE00F63A96 /* UIView+Contraints.swift in Sources */,
 				3BCC3035292089F100F63A96 /* StateController.swift in Sources */,
 				3BC393DD292BF54200DE6BF5 /* SpinnerDisplayable.swift in Sources */,
+				3B1F24592991B67500D7079D /* LocationsViewController.swift in Sources */,
 				3B2A4ECE2963CE92005E8ED6 /* CharacterRepositoryImp.swift in Sources */,
 				3B2A4EB12963C7EE005E8ED6 /* String+empty.swift in Sources */,
 				3B6170C0297651D8002D2644 /* AppContainer.swift in Sources */,
@@ -1089,8 +1178,10 @@
 				3BC393DF292BF57400DE6BF5 /* ViewValues.swift in Sources */,
 				3B2A4EDE2963DE5E005E8ED6 /* UITableViewController+SpinnerLast.swift in Sources */,
 				3B7C2EB1291DF494005B3D42 /* HomeCoordinator.swift in Sources */,
+				3B1F24612991B7C200D7079D /* LocationsRepositoryImp.swift in Sources */,
 				3B2A4EC92963CDB7005E8ED6 /* CharactersRepository.swift in Sources */,
 				3BCC3040292099C000F63A96 /* ApiError.swift in Sources */,
+				3B1F24692991B98E00D7079D /* LoadLocationsUseCase.swift in Sources */,
 				3BCC303729208AA000F63A96 /* ItemHomeMenuViewModel.swift in Sources */,
 				3BCC304C2920A13700F63A96 /* Endpoint.swift in Sources */,
 				3B1F24352991673200D7079D /* CharacterDetailRepository.swift in Sources */,
@@ -1103,9 +1194,11 @@
 				3BCC304329209C9A00F63A96 /* HttpResponseStatus.swift in Sources */,
 				3B2A4EC32963CCCC005E8ED6 /* LocationDTO.swift in Sources */,
 				3BCC304A29209FE500F63A96 /* PropertyIterator.swift in Sources */,
+				3B1F245D2991B74500D7079D /* LocationsRepository.swift in Sources */,
 				3BC393E3292C025B00DE6BF5 /* AppLocalized.swift in Sources */,
 				3BCC30332920898100F63A96 /* HomeMenuViewModel.swift in Sources */,
 				3B2A4ECB2963CE3C005E8ED6 /* Info.swift in Sources */,
+				3B1F24532991B37000D7079D /* LocationsFactory.swift in Sources */,
 				3B2A4EBD2963CC19005E8ED6 /* CharacterDTO.swift in Sources */,
 				3B6170C2297655A1002D2644 /* UIImageView+Utils.swift in Sources */,
 				3B6170B329764C6C002D2644 /* ApiClientServiceImp+RemoteImageDataService.swift in Sources */,
@@ -1122,9 +1215,12 @@
 				3B6170B529764D3F002D2644 /* LocalDataImageService.swift in Sources */,
 				3B07D8F92952BDC50067C293 /* ItemCharacterTableViewCell.swift in Sources */,
 				3B6170AF2976436D002D2644 /* LastPageValidationUseCase.swift in Sources */,
+				3B1F24642991B85C00D7079D /* ResultLocationsDTO.swift in Sources */,
 				3B2A4ED72963D551005E8ED6 /* CharactersViewModel.swift in Sources */,
 				3BCC303A292098BC00F63A96 /* ApiClientService.swift in Sources */,
+				3B1F24662991B8A800D7079D /* ResultLocationDTO+Mapper.swift in Sources */,
 				3B1F242E299159F100D7079D /* CharacterDetailCoordinator.swift in Sources */,
+				3B1F24552991B3D800D7079D /* LocationsCoordinator.swift in Sources */,
 				3B1F24512991932900D7079D /* OriginViewController.swift in Sources */,
 				3BCC304629209EE100F63A96 /* MenuDTO.swift in Sources */,
 				3B1F243E29916CAB00D7079D /* LoadCharacterDetailUseCase.swift in Sources */,

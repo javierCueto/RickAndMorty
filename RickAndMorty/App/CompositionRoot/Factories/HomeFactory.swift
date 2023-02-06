@@ -10,16 +10,15 @@ import UIKit
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController
-    func makeCoordinatorCharacters(
+    func makeCharactersCoordinator(
         navigation: UINavigationController,
         urlList: String
     ) -> Coordinator
+    func makeLocationsCoordinator(navigation: UINavigationController, urlLocations: String) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
-    
     let appContainer: AppContainer
-    
     
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImp()
@@ -51,7 +50,7 @@ struct HomeFactoryImp: HomeFactory {
         return layout
     }
     
-    func makeCoordinatorCharacters(
+    func makeCharactersCoordinator(
         navigation: UINavigationController,
         urlList: String
     ) -> Coordinator {
@@ -64,4 +63,9 @@ struct HomeFactoryImp: HomeFactory {
         return characterCoordinator
     }
     
+    func makeLocationsCoordinator(navigation: UINavigationController, urlLocations: String) -> Coordinator {
+        let locationsFactory = LocationsFactoryImp(urlLocations: urlLocations, appContainer: appContainer)
+        let locationsCoordinator = LocationsCoordinator(locationsFactory: locationsFactory, navigation: navigation)
+        return locationsCoordinator
+    }
 }

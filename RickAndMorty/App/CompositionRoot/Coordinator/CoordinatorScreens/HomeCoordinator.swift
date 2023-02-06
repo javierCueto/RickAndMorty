@@ -31,21 +31,26 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
         case "episodes":
             goToEpisodes()
         case "locations":
-            goToLocations()
+            goToLocations(urlLocations: model.url)
         default:
             break
         }
     }
     
     private func goToCharacters(urlList: String) {
-        let characterCoordinator =  homeFactory.makeCoordinatorCharacters(
+        let characterCoordinator =  homeFactory.makeCharactersCoordinator(
             navigation: navigation,
             urlList: urlList)
         characterCoordinator.start()
     }
     
-    private func goToLocations() {
-        print("screen locations")
+    private func goToLocations(urlLocations: String) {
+        let locationsCoordinator = homeFactory
+            .makeLocationsCoordinator(
+                navigation: navigation,
+                urlLocations: urlLocations)
+        
+        locationsCoordinator.start()
     }
     
     private func goToEpisodes() {
