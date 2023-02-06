@@ -19,6 +19,12 @@
 		3B1F243B299168E200D7079D /* CharacterDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F243A299168E200D7079D /* CharacterDTO+Mapping.swift */; };
 		3B1F243E29916CAB00D7079D /* LoadCharacterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F243D29916CAB00D7079D /* LoadCharacterDetailUseCase.swift */; };
 		3B1F244229916E0500D7079D /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F244129916E0500D7079D /* CharacterDetailViewModel.swift */; };
+		3B1F24442991901000D7079D /* OriginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24432991901000D7079D /* OriginCoordinator.swift */; };
+		3B1F24462991903800D7079D /* OriginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24452991903800D7079D /* OriginFactory.swift */; };
+		3B1F24482991911800D7079D /* LocationDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24472991911800D7079D /* LocationDetailFactory.swift */; };
+		3B1F244A2991915600D7079D /* LocationDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24492991915600D7079D /* LocationDetailCoordinator.swift */; };
+		3B1F244D2991924200D7079D /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F244C2991924200D7079D /* LocationDetailViewController.swift */; };
+		3B1F24512991932900D7079D /* OriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F24502991932900D7079D /* OriginViewController.swift */; };
 		3B2A4EAD2963C6FF005E8ED6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EAC2963C6FF005E8ED6 /* Character.swift */; };
 		3B2A4EAF2963C740005E8ED6 /* StatusCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EAE2963C740005E8ED6 /* StatusCharacter.swift */; };
 		3B2A4EB12963C7EE005E8ED6 /* String+empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EB02963C7EE005E8ED6 /* String+empty.swift */; };
@@ -114,6 +120,12 @@
 		3B1F243A299168E200D7079D /* CharacterDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterDTO+Mapping.swift"; sourceTree = "<group>"; };
 		3B1F243D29916CAB00D7079D /* LoadCharacterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCharacterDetailUseCase.swift; sourceTree = "<group>"; };
 		3B1F244129916E0500D7079D /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		3B1F24432991901000D7079D /* OriginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginCoordinator.swift; sourceTree = "<group>"; };
+		3B1F24452991903800D7079D /* OriginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginFactory.swift; sourceTree = "<group>"; };
+		3B1F24472991911800D7079D /* LocationDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailFactory.swift; sourceTree = "<group>"; };
+		3B1F24492991915600D7079D /* LocationDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailCoordinator.swift; sourceTree = "<group>"; };
+		3B1F244C2991924200D7079D /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		3B1F24502991932900D7079D /* OriginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginViewController.swift; sourceTree = "<group>"; };
 		3B2A4EAC2963C6FF005E8ED6 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3B2A4EAE2963C740005E8ED6 /* StatusCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCharacter.swift; sourceTree = "<group>"; };
 		3B2A4EB02963C7EE005E8ED6 /* String+empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+empty.swift"; sourceTree = "<group>"; };
@@ -298,6 +310,22 @@
 				3B1F242B299159BB00D7079D /* CharacterDetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3B1F244B2991920A00D7079D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F244C2991924200D7079D /* LocationDetailViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B1F244F2991931500D7079D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F24502991932900D7079D /* OriginViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		3B2A4EAB2963C6E0005E8ED6 /* Entities */ = {
@@ -590,6 +618,7 @@
 		3B7C2E95291DECD6005B3D42 /* Origin */ = {
 			isa = PBXGroup;
 			children = (
+				3B1F244F2991931500D7079D /* Presentation */,
 			);
 			path = Origin;
 			sourceTree = "<group>";
@@ -597,6 +626,7 @@
 		3B7C2E96291DECE0005B3D42 /* LocationDetail */ = {
 			isa = PBXGroup;
 			children = (
+				3B1F244B2991920A00D7079D /* Presentation */,
 			);
 			path = LocationDetail;
 			sourceTree = "<group>";
@@ -714,6 +744,8 @@
 				3B7C2EB0291DF494005B3D42 /* HomeCoordinator.swift */,
 				3B07D8F52952B9A20067C293 /* CharactersCoordinator.swift */,
 				3B1F242D299159F100D7079D /* CharacterDetailCoordinator.swift */,
+				3B1F24432991901000D7079D /* OriginCoordinator.swift */,
+				3B1F24492991915600D7079D /* LocationDetailCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -725,6 +757,8 @@
 				3B7C2EB2291DF4E6005B3D42 /* HomeFactory.swift */,
 				3B07D8F02952B8660067C293 /* CharactersFactory.swift */,
 				3B1F242F29915A4A00D7079D /* CharacterDetailFactory.swift */,
+				3B1F24452991903800D7079D /* OriginFactory.swift */,
+				3B1F24472991911800D7079D /* LocationDetailFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1032,7 +1066,9 @@
 				3B2A4EDC2963D6A3005E8ED6 /* BaseViewModel.swift in Sources */,
 				3B2A4ED92963D5CA005E8ED6 /* ItemCharacterViewModel.swift in Sources */,
 				3BCC303D2920992300F63A96 /* ApiClientServiceImp.swift in Sources */,
+				3B1F244A2991915600D7079D /* LocationDetailCoordinator.swift in Sources */,
 				3B2A4EAF2963C740005E8ED6 /* StatusCharacter.swift in Sources */,
+				3B1F24442991901000D7079D /* OriginCoordinator.swift in Sources */,
 				3B7C2E5E291DE7A4005B3D42 /* HomeMenuController.swift in Sources */,
 				3B6170BE2976505C002D2644 /* ImageDataUseCase.swift in Sources */,
 				3B07D8F62952B9A20067C293 /* CharactersCoordinator.swift in Sources */,
@@ -1059,6 +1095,8 @@
 				3BCC304C2920A13700F63A96 /* Endpoint.swift in Sources */,
 				3B1F24352991673200D7079D /* CharacterDetailRepository.swift in Sources */,
 				3BC393E5292C04A000DE6BF5 /* Images.swift in Sources */,
+				3B1F244D2991924200D7079D /* LocationDetailViewController.swift in Sources */,
+				3B1F24482991911800D7079D /* LocationDetailFactory.swift in Sources */,
 				3B1F243029915A4A00D7079D /* CharacterDetailFactory.swift in Sources */,
 				3B1F2438299167CE00D7079D /* CharacterDetailRepositoryImp.swift in Sources */,
 				3B2A4EC02963CC9A005E8ED6 /* OriginDTO.swift in Sources */,
@@ -1072,6 +1110,7 @@
 				3B6170C2297655A1002D2644 /* UIImageView+Utils.swift in Sources */,
 				3B6170B329764C6C002D2644 /* ApiClientServiceImp+RemoteImageDataService.swift in Sources */,
 				3BCC302C2920882B00F63A96 /* MenuRepositoryImp.swift in Sources */,
+				3B1F24462991903800D7079D /* OriginFactory.swift in Sources */,
 				3B2A4EBB2963CBE5005E8ED6 /* ResultsCharactersDTO.swift in Sources */,
 				3B2A4EAD2963C6FF005E8ED6 /* Character.swift in Sources */,
 				3BCC304829209F6400F63A96 /* MenuDTO+Mapper.swift in Sources */,
@@ -1086,6 +1125,7 @@
 				3B2A4ED72963D551005E8ED6 /* CharactersViewModel.swift in Sources */,
 				3BCC303A292098BC00F63A96 /* ApiClientService.swift in Sources */,
 				3B1F242E299159F100D7079D /* CharacterDetailCoordinator.swift in Sources */,
+				3B1F24512991932900D7079D /* OriginViewController.swift in Sources */,
 				3BCC304629209EE100F63A96 /* MenuDTO.swift in Sources */,
 				3B1F243E29916CAB00D7079D /* LoadCharacterDetailUseCase.swift in Sources */,
 				3B2A4EB72963CB73005E8ED6 /* Location.swift in Sources */,
