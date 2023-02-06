@@ -26,7 +26,12 @@ final class CharactersCoordinator: Coordinator {
 }
 
 extension CharactersCoordinator: CharactersViewControllerCoordinator {
-    func didSelectMenuCell(urlDetail: String) {
-        print("navigate to detail")
+    func didSelectCell(urlDetail: String) {
+        let characterDetailCoordinator = charactersFactory
+            .makeCharacterDetailCoordinator(
+            navigation: navigation,
+            urlDetail: urlDetail)
+        
+        characterDetailCoordinator.start()
     }
 }
