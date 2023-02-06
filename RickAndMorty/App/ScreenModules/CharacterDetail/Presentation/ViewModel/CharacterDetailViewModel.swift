@@ -62,7 +62,16 @@ final class CharacterDetailViewModelImp: CharacterDetailViewModel {
     }
     
     func viewDidLoad() {
-        
+        state.send(.loading)
+        Task {
+            do {
+                let characterResult = try await loadCharacterDetailUseCase.execute()
+                character = characterResult
+                state.send(.success)
+            }catch {
+                state.send(.fail(error: error.localizedDescription))
+            }
+        }
     }
     
     
