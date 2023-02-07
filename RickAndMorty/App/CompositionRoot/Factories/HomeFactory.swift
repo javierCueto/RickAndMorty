@@ -14,10 +14,20 @@ protocol HomeFactory {
         navigation: UINavigationController,
         urlList: String
     ) -> Coordinator
-    func makeLocationsCoordinator(navigation: UINavigationController, urlLocations: String) -> Coordinator
+    
+    func makeLocationsCoordinator(
+        navigation: UINavigationController,
+        urlLocations: String
+    ) -> Coordinator
+    
+    func makeEpisodesCoordinator(
+        navigation: UINavigationController,
+        urlEpisodes: String
+    ) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
+    
     let appContainer: AppContainer
     
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController {
@@ -67,5 +77,17 @@ struct HomeFactoryImp: HomeFactory {
         let locationsFactory = LocationsFactoryImp(urlLocations: urlLocations, appContainer: appContainer)
         let locationsCoordinator = LocationsCoordinator(locationsFactory: locationsFactory, navigation: navigation)
         return locationsCoordinator
+    }
+    
+    func makeEpisodesCoordinator(
+        navigation: UINavigationController, urlEpisodes: String
+    ) -> Coordinator {
+        let episodesFactory = EpisodesFactoryImp(
+            urlEpisodes: urlEpisodes,
+            appContainer: appContainer)
+        let episodesCoordinator = EpisodesCoordinator(
+            episodesFactory: episodesFactory,
+            navigation: navigation)
+        return episodesCoordinator
     }
 }

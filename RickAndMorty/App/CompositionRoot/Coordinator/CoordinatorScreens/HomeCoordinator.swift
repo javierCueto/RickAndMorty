@@ -29,7 +29,7 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
         case "characters":
             goToCharacters(urlList: model.url)
         case "episodes":
-            goToEpisodes()
+            goToEpisodes(urlEpisodes: model.url)
         case "locations":
             goToLocations(urlLocations: model.url)
         default:
@@ -53,7 +53,12 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
         locationsCoordinator.start()
     }
     
-    private func goToEpisodes() {
-        print("screen episodes")
+    private func goToEpisodes(urlEpisodes: String) {
+        let episodesCoordinator = homeFactory
+            .makeEpisodesCoordinator(
+                navigation: navigation,
+                urlEpisodes: urlEpisodes)
+        
+        episodesCoordinator.start()
     }
 }
