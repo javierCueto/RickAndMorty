@@ -46,6 +46,8 @@ final class ItemEpisodeTableViewCell: UITableViewCell {
         mainContainerStackView.axis = .vertical
         mainContainerStackView.spacing = 5
         
+        addSubview(mainContainerStackView)
+        
         mainContainerStackView.setConstraints(
             top: topAnchor,
             right: rightAnchor,

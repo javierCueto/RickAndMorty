@@ -45,6 +45,7 @@ struct ApiClientServiceImp: ApiClientService {
     
     private func decodeModel<T: Decodable>(data: Data) throws -> T {
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         let model = try? decoder.decode(T.self, from: data)
         guard let model = model else { throw ApiError.errorDecoding }
         return model
